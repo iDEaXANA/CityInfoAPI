@@ -1,3 +1,4 @@
+using System.Drawing;
 using CityinfoAPI.Models;
 
 namespace CityinfoAPI
@@ -16,19 +17,52 @@ namespace CityinfoAPI
                 {
                     Id = 1,
                     Name = "New York City",
-                    Description = "The one with that big park."
+                    Description = "The one with that big park.",
+                    PointsOfInterest = new List<PointOfInterestDTO>()
+                        {
+                            new PointOfInterestDTO() {
+                                Id = 1,
+                                Name = "Big Apple",
+                                Description = "Tasty rats"},
+                             new PointOfInterestDTO() {
+                                Id = 2,
+                                Name = "Broadway",
+                                Description = "Drama"},
+                        }
                 },
                 new CityDTO()
                 {
                     Id = 2,
                     Name = "Algiers",
-                    Description = "The one that's worse than Oran."
+                    Description = "The one that's worse than Oran.",
+                    PointsOfInterest = new List<PointOfInterestDTO>()
+                        {
+                            new PointOfInterestDTO() {
+                                Id = 1,
+                                Name = "Big Apple",
+                                Description = "Tasty rats"},
+                             new PointOfInterestDTO() {
+                                Id = 2,
+                                Name = "Broadway",
+                                Description = "Drama"},
+                        }
                 },
                 new CityDTO()
                 {
                     Id = 3,
                     Name = "Paris",
-                    Description = "The one with the tower that got sold twice."
+                    Description = "The one with the tower that got sold twice.",
+                    PointsOfInterest = new List<PointOfInterestDTO>()
+                        {
+                            new PointOfInterestDTO() {
+                                Id = 1,
+                                Name = "Big Apple",
+                                Description = "Tasty rats"},
+                             new PointOfInterestDTO() {
+                                Id = 2,
+                                Name = "Broadway",
+                                Description = "Drama"},
+                        }
                 }
 
             };
