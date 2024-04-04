@@ -7,7 +7,7 @@ namespace CityinfoAPI
     {
         public List<CityDTO> Cities { get; set; } // CityDTO = object, get/set for read/write perms.
 
-        public static CitiesDataStore Current { get; } = new CitiesDataStore(); // Singleton Pattern, hence get only. 
+        public static CitiesDataStore Current { get; } = new CitiesDataStore(); // Singleton Pattern => Static property + Single Instance
 
         public CitiesDataStore()
         {
@@ -38,13 +38,13 @@ namespace CityinfoAPI
                     PointsOfInterest = new List<PointOfInterestDTO>()
                         {
                             new PointOfInterestDTO() {
-                                Id = 1,
-                                Name = "Big Apple",
-                                Description = "Tasty rats"},
+                                Id = 3,
+                                Name = "Oran",
+                                Description = "Best City in Algeria"},
                              new PointOfInterestDTO() {
-                                Id = 2,
-                                Name = "Broadway",
-                                Description = "Drama"},
+                                Id = 4,
+                                Name = "Algiers",
+                                Description = "It's too french looking."},
                         }
                 },
                 new CityDTO()
@@ -55,13 +55,13 @@ namespace CityinfoAPI
                     PointsOfInterest = new List<PointOfInterestDTO>()
                         {
                             new PointOfInterestDTO() {
-                                Id = 1,
-                                Name = "Big Apple",
-                                Description = "Tasty rats"},
+                                Id = 5,
+                                Name = "Eiffel Tower",
+                                Description = "Iconic"},
                              new PointOfInterestDTO() {
-                                Id = 2,
-                                Name = "Broadway",
-                                Description = "Drama"},
+                                Id = 6,
+                                Name = "Marseille",
+                                Description = "Algeria"},
                         }
                 }
 
