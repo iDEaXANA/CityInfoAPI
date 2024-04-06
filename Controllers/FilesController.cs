@@ -7,10 +7,10 @@ namespace CityInfoAPI.Controllers
     [ApiController]
     public class FilesController : ControllerBase
     {
-        private readonly FileExtensionContentTypeProvider _fileExtensionContentTypeProvider;
+        private readonly FileExtensionContentTypeProvider _fileExtensionContentTypeProvider; // maps extensions to MIME (Multipurpose Internet Media Extensions)
         public FilesController(FileExtensionContentTypeProvider fileExtensionContentTypeProvider)
         {
-            _fileExtensionContentTypeProvider = fileExtensionContentTypeProvider ?? throw new System.ArgumentNullException(nameof(fileExtensionContentTypeProvider));
+            _fileExtensionContentTypeProvider = fileExtensionContentTypeProvider ?? throw new System.ArgumentNullException(nameof(fileExtensionContentTypeProvider)); // Null coalescing operator
         }
         [HttpGet("{fileId}")]
         public ActionResult GetFile(string fileId)
@@ -22,7 +22,7 @@ namespace CityInfoAPI.Controllers
                 return NotFound();
             }
 
-            if (!_fileExtensionContentTypeProvider.TryGetContentType(pathToFile, out var contentType))
+            if (!_fileExtensionContentTypeProvider.TryGetContentType(pathToFile, out var contentType)) // out => assigns a value to contentType
             {
                 contentType = "application/octet-stream"; //default media type for arbitrary binary data
             }
