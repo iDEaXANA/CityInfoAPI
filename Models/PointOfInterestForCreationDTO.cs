@@ -4,7 +4,7 @@ namespace CityinfoAPI.Models
 {
     public class PointOfInterestForCreationDTO
     {
-        [Required(ErrorMessage = "Please provide a name.")] // Everything has a name!
+        [Required(ErrorMessage = "A name must be provided.")] // Everything has a name!
         [MaxLength(50)]
         public string Name { get; set; } = string.Empty;
 
