@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.Options;
 
+// auto assigns logging provider
 var builder = WebApplication.CreateBuilder(args);
+builder.Logging.ClearProviders();
+builder.Logging.AddConsole();
 
 // Add services to the container.
 
