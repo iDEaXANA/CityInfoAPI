@@ -23,10 +23,10 @@ namespace CityInfoAPI.Controllers
         [HttpGet] // auto implementation.
         public ActionResult<IEnumerable<PointOfInterestDTO>> GetPointsOfInterest(int cityId)
         {
+            throw new Exception("Exception TEST");
             try
             {
                 // To test
-                throw new Exception("Exception TEST");
                 var city = CitiesDataStore.Current.Cities.FirstOrDefault(c => c.Id == cityId);
 
                 if (city == null)
