@@ -7,7 +7,7 @@ namespace CityinfoAPI
     {
         public List<CityDTO> Cities { get; set; } // CityDTO = object, get/set for read/write perms.
 
-        public static CitiesDataStore Current { get; } = new CitiesDataStore(); // Singleton Pattern => Static property + Single Instance
+        // public static CitiesDataStore Current { get; } = new CitiesDataStore(); // Singleton Pattern => Static property + Single Instance. // !!Move to DI Singleton
 
         public CitiesDataStore()
         {
